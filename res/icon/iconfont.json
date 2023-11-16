@@ -1,0 +1,79 @@
+{
+  "id": "4328857",
+  "name": "lover",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "142340",
+      "name": "media-pause",
+      "font_class": "mediapause",
+      "unicode": "e981",
+      "unicode_decimal": 59777
+    },
+    {
+      "icon_id": "142341",
+      "name": "media-play",
+      "font_class": "mediaplay",
+      "unicode": "e982",
+      "unicode_decimal": 59778
+    },
+    {
+      "icon_id": "8986733",
+      "name": "love",
+      "font_class": "-love",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "4766917",
+      "name": "image",
+      "font_class": "image",
+      "unicode": "e7de",
+      "unicode_decimal": 59358
+    },
+    {
+      "icon_id": "13817987",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "13819193",
+      "name": "about",
+      "font_class": "about",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "13819197",
+      "name": "diary",
+      "font_class": "diary",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "13823280",
+      "name": "todo",
+      "font_class": "todo",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "961452",
+      "name": "success",
+      "font_class": "success",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "1410327",
+      "name": "error",
+      "font_class": "error",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    }
+  ]
+}

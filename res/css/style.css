@@ -102,6 +102,7 @@ body {
     background-color: #ddd;
     color: #f6f6f6;
     cursor: not-allowed;
+    pointer-events: not-allowed;
 }
 
 .con-box {

@@ -13,26 +13,26 @@
         <div class="form">
             <div class="register-box hidden">
                 <h1>Register</h1>
-                <div class="error hidden">
+                <div class="error hidden" id="register_err">
                     <i class="iconfont icon-error"></i>
                     <span>错误信息</span>
                 </div>
-                <input type="text" placeholder="邮箱">
-                <input type="password" placeholder="密码">
-                <input type="password" placeholder="确认密码">
-                <input type="text" placeholder="验证码">
-                <button>发送验证码</button>
-                <button>注册</button>
+                <input name="email" type="text" placeholder="邮箱">
+                <input name="password" type="password" placeholder="密码">
+                <input name="confirm" type="password" placeholder="确认密码">
+                <input name="captcha" type="text" placeholder="验证码">
+                <button id="captcha_btn">发送验证码</button>
+                <button id="register_btn">注册</button>
             </div>
             <div class="login-box">
                 <h1>Login</h1>
-                <div class="error hidden">
+                <div class="error hidden" id="login_err">
                     <i class="iconfont icon-error"></i>
                     <span>错误信息</span>
                 </div>
-                <input type="text" placeholder="用户名">
-                <input type="password" placeholder="密码">
-                <button>登录</button>
+                <input name="username" type="text" placeholder="用户名">
+                <input name="password" type="password" placeholder="密码">
+                <button id="login_btn">登录</button>
             </div>
         </div>
         <div class="con-box left">
@@ -73,5 +73,6 @@
             register_box.classList.remove('hidden');
          })
     </script>
+    <script src="/res/js/index.js"></script>
 </body>
 </html>

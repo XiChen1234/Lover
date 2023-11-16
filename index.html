@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lover - login</title>
+    <link rel="stylesheet" href="/res/icon/iconfont.css">
+    <link rel="stylesheet" href="/res/css/style.css">
+    <link rel="shortcut icon" href="/res/img/love.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="register-box hidden">
+                <h1>Register</h1>
+                <div class="error hidden">
+                    <i class="iconfont icon-error"></i>
+                    <span>错误信息</span>
+                </div>
+                <input type="text" placeholder="邮箱">
+                <input type="password" placeholder="密码">
+                <input type="password" placeholder="确认密码">
+                <input type="text" placeholder="验证码">
+                <button>发送验证码</button>
+                <button>注册</button>
+            </div>
+            <div class="login-box">
+                <h1>Login</h1>
+                <div class="error hidden">
+                    <i class="iconfont icon-error"></i>
+                    <span>错误信息</span>
+                </div>
+                <input type="text" placeholder="用户名">
+                <input type="password" placeholder="密码">
+                <button>登录</button>
+            </div>
+        </div>
+        <div class="con-box left">
+            <h2>欢迎来到<span>朝暮清晨</span></h2>
+            <p>Welcome</p>
+            <img src="/res/img/2.jpg" alt="">
+            <p>已有账号？</p>
+            <button id="to_login">去登陆</button>
+        </div>
+        <div class="con-box right">
+            <h2>欢迎来到<span>朝暮清晨</span></h2>
+            <p>Welcome</p>
+            <img src="/res/img/1.jpg" alt="">
+            <p>没有账号？</p>
+            <button id="to_register">去注册</button>
+        </div>
+    </div>
+
+    <!-- 样式js -->
+    <script>
+        let to_login = document.getElementById("to_login");
+        let to_register = document.getElementById("to_register");
+        let form = document.getElementsByClassName("form")[0];
+        let login_box = document.getElementsByClassName("login-box")[0];
+        let register_box = document.getElementsByClassName("register-box")[0];
+
+        // 点击去登录，切换去登录
+         to_login.addEventListener('click', ()=>{
+            form.style.transform='translateX(0%)';
+            login_box.classList.remove('hidden');
+            register_box.classList.add('hidden');
+         })
+
+        // 点击去注册，切换去注册
+        to_register.addEventListener('click', ()=>{
+            form.style.transform='translateX(80%)';
+            login_box.classList.add('hidden');
+            register_box.classList.remove('hidden');
+         })
+    </script>
+</body>
+</html>

@@ -198,3 +198,198 @@ header {
     
     transform: scale(1.5);
 }
+
+.bg-love {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.bg-love li {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    animation: lovebubo 5s linear infinite;
+    opacity: 0;
+}
+.bg-love li::after,
+.bg-love li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.bg-love li::after {
+    top: -50%;
+    left: 0;
+}
+
+.bg-love li::before {
+    top: 0;
+    left: 50%;
+}
+@keyframes lovebubo {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(600deg);
+        opacity: 0.3;
+    }
+}
+.bg-love li:nth-child(1) {
+    bottom: 0;
+    left: 23%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+.bg-love li:nth-child(2) {
+    bottom: 10%;
+    left: 89%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 7s;
+    animation-delay: 5s;
+}
+
+.bg-love li:nth-child(3) {
+    bottom: 5%;
+    left: 54%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
+
+.bg-love li:nth-child(4) {
+    bottom: 0%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 10s;
+    animation-delay: 5s;
+}
+
+.bg-love li:nth-child(5) {
+    bottom: 2%;
+    left: 46%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 6s;
+    animation-delay: 0s;
+}
+
+.bg-love li:nth-child(6) {
+    bottom: 7%;
+    left: 41%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+.bg-love li:nth-child(7) {
+    bottom: 2%;
+    left: 76%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+
+.bg-love li:nth-child(8) {
+    bottom: 1%;
+    left: 33%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.bg-love li:nth-child(9) {
+    bottom: 9%;
+    left: 33%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 9s;
+    animation-delay: 2s;
+}
+
+.bg-love li:nth-child(10) {
+    bottom: 2%;
+    left: 99%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+.bg-love li:nth-child(11) {
+    bottom: 0;
+    left: 4%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.bg-love li:nth-child(12) {
+    bottom: 3%;
+    left: 75%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 7s;
+    animation-delay: 5s;
+}
+
+.bg-love li:nth-child(13) {
+    bottom: 16%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+
+.bg-love li:nth-child(14) {
+    bottom: 17%;
+    left: 11%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 2s;
+    animation-delay: 3s;
+}
+
+.bg-love li:nth-child(15) {
+    bottom: 12%;
+    left: 86%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.bg-love li:nth-child(16) {
+    bottom: 11%;
+    left: 43%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}

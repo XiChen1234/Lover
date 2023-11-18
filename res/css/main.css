@@ -40,7 +40,7 @@ nav .logo {
 }
 
 nav .title {
-    width: 200px;
+    width: 300px;
     white-space: nowrap;
     text-align: right;
     color: #f6f6f6;
@@ -57,7 +57,7 @@ nav .title {
     }
 
     80%, 100% {
-        width: 180px;
+        width: 200px;
     }
 }
 
@@ -82,6 +82,7 @@ header {
 
 .image-box {
     margin-top: 100px;
+    margin-bottom: 10px;
     width: 90vw;
     display: flex;
     align-items: center;

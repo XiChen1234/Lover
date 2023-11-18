@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
     <link rel="stylesheet" href="/res/css/main.css">
     <link rel="shortcut icon" href="/res/img/love.svg" type="image/x-icon">
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav>
         <div class="logo">朝暮清晨</div>
         <div>
-            <div class="title">记录我们爱情的网站  </div>
+            <div class="title">记录我们爱情时刻的网站 </div>
         </div>
     </nav>
 
@@ -43,16 +45,105 @@
                 <span>曹&nbsp;&nbsp;&nbsp;&nbsp;清</span>
             </div>
             <div class="content">
-                <p class="time">2021年11月7日16时52分<br>
-                从此刻开始，我们一起度过了</p>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
+                <p class="time"><span id="time">2021年11月7日16时52分</span><br>
+                    从此刻开始，我们一起度过了</p>
+                <div id="year">&nbsp;</div>
+                <div id="month">&nbsp;</div>
+                <div id="day">&nbsp;</div>
+                <div id="hour">&nbsp;</div>
+                <div id="minute">&nbsp;</div>
+                <div id="second">&nbsp;</div>
             </div>
         </div>
     </header>
+
+    <ul class="bg-love">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <audio id="audio" src="/res/audio/lian_ai_gao_ji.mp3" loop="loop"></audio>
+    
+
+    <!-- audio -->
+    <script>
+        
+        let audio = document.getElementById("audio");
+        
+        audio.play();
+    </script>
+    <!-- time js -->
+    <script>
+        let dateStr = document.getElementById("time").textContent;
+        let year = document.getElementById("year");
+        let month = document.getElementById("month");
+        let day = document.getElementById("day");
+        let hour = document.getElementById("hour");
+        let minute = document.getElementById("minute");
+        let second = document.getElementById("second");
+
+        let id = setInterval(() => {
+            let data = calc_date(dateStr);
+            // console.log(data.second)
+            year.textContent = data.year + "年"
+            month.textContent = data.month + "月"
+            day.textContent = data.day + "日"
+            hour.textContent = data.hour + "小时"
+            minute.textContent = data.minute + "分钟"
+            second.textContent = data.second + "秒"
+        }, 1000)
+
+
+        function calc_date(dateStr) {
+            let regex = /(\d{4})年(\d{1,2})月(\d{1,2})日(\d{1,2})时(\d{1,2})分/;
+            let match = dateStr.match(regex);
+            let past = {
+                year: parseInt(match[1]),
+                month: parseInt(match[2]),
+                day: parseInt(match[3]),
+                hour: parseInt(match[4]),
+                minute: parseInt(match[5]),
+                second: "00"
+            }
+            let pastDate = new Date(past.year, past.month - 1, past.day, past.hour, past.minute, past.second);
+
+            let currentDate = new Date();
+
+            let ms = currentDate - pastDate;
+            let second = Math.floor(ms / 1000);
+            let minute = Math.floor(second / 60);
+            let hour = Math.floor(minute / 60);
+            let day = Math.floor(hour / 24);
+
+            let year = currentDate.getFullYear() - past.year;
+
+            let month = currentDate.getMonth() + 1 - past.month + 12 * year;
+
+            // console.log(year, month, day, hour, minute, second)
+            return {
+                year: year,
+                month: month,
+                day: day,
+                hour: hour,
+                minute: minute,
+                second: second
+            }
+        }
+    </script>
 </body>
+
 </html>
